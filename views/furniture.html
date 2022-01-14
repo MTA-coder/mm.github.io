@@ -27,6 +27,12 @@
 
 <!-- <link type="text/css" rel="stylesheet" href="../assets/css/furniture.min.css"> -->
 <style>
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 50%;
+    }
+    
     .plus-compare.compare::before,
     .ht-product-action ul li a::before {
         content: "+";
@@ -151,17 +157,11 @@
               </div>
             </div>
 
-            <div
-              class="site-logo col-md-6 col-sm-12"
-              itemscope
-              itemtype="http://schema.org/Organization"
-            >
+            <div class="site-logo col-md-6 col-sm-12">
               <a href="#" rel="home" title="Montini Bags">
-                <!-- <img src="https://www.montinibags.it/wp-content/uploads/2019/02/logo.jpg" alt="Borse Artigianali" itemprop="logo" /> -->
                 <img
                   src="../assets/imgs/MM.jpg"
                   alt="Borse Artigianali"
-                  itemprop="logo"
                   width="439"
                 />
               </a>
@@ -233,6 +233,84 @@
       </div>
       <!-- Logo & hgroup (end)-->
     </header>
+
+    <section>
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner" style="height: 26rem">
+          <div class="carousel-item active">
+            <img
+              src="../assets/imgs/carasoul/furniture-3.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/imgs/carasoul/furniture-4.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/imgs/carasoul/furniture-4.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/imgs/carasoul/bag-3.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/imgs/carasoul/bag-4.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/imgs/carasoul/shoes-1.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/imgs/carasoul/shoes-2.jpg"
+              class="w-100 h-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
     <section
       class="elementor-section elementor-top-section elementor-element elementor-element-c2cd445 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
