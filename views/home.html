@@ -407,7 +407,7 @@
                           <input
                             type="text"
                             class="form-control"
-                            placeholder="only mobile"
+                            placeholder="search..."
                           />
                           <i class="fas fa-search fs-5 icon-search"></i>
                         </div>
@@ -507,25 +507,25 @@
 
                                             <section class="mt-5 section-counter">
                                                 <div class="row">
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-md-3 text-center mt-3">
                                                         <i class="fas fa-shoe-prints rounded-circle-icon fs-1 mb-3 rotating"></i>
                                                         <br />
                                                         <span class="font-font-awesome fs-4">Over +<span counter="1500" class="animate-counter">0</span> <br /> Shoes
                                                         </span>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-md-3 text-center mt-3">
                                                         <i class="fas fa-shopping-bag rounded-circle-icon fs-1 mb-3 rotating"></i>
                                                         <br />
                                                         <span class="font-font-awesome fs-4">Over +<span counter="3000" class="animate-counter">0</span> <br /> Bags
                                                         </span>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-md-3 text-center mt-3">
                                                         <i class="fas fa-couch rounded-circle-icon fs-1 mb-3 rotating"></i>
                                                         <br />
                                                         <span class="font-font-awesome fs-4">Over +<span counter="10000" class="animate-counter">0</span> <br /> Furniture
                                                         </span>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-md-3 text-center mt-3">
                                                         <i class="fas fa-user rounded-circle-icon fs-1 mb-3 rotating"></i>
                                                         <br />
                                                         <span class="font-font-awesome fs-4">Over +<span counter="6000" class="animate-counter">0</span> <br /> Leather
@@ -561,42 +561,14 @@
                                                 </div>
                                             </div>
 
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-c2cd445 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c2cd445" data-element_type="section">
+                                            <section class="mt-5 elementor-section elementor-top-section elementor-element elementor-element-c2cd445 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c2cd445" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-49f7dd5" data-id="49f7dd5" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-bdec8b8 elementor-widget elementor-widget-heading" data-id="bdec8b8" data-element_type="widget" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">
-                                                                                All Products
-                                                                            </h2>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-1a17d55 elementor-widget elementor-widget-heading" data-id="1a17d55" data-element_type="widget" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <p class="elementor-heading-title elementor-size-default">
-                                                                                Contrary to popular belief, Lorem Ipsum is not simply random <br />text. It has roots in a piece of classical
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
                                                                     <div class="elementor-element elementor-element-f13b12b elementor-widget elementor-widget-woolentor-universal-product" data-id="f13b12b" data-element_type="widget" data-widget_type="woolentor-universal-product.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div class="product-tab-list ht-text-center">
-                                                                                <ul class="ht-tab-menus">
-                                                                                    <li>
-                                                                                        <a class="htactive" href="#"> Accessories </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="" href="#w"> Decor </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="" href="#"> Hoodies </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-
                                                                             <div class="ht-products woocommerce">
                                                                                 <div class="ht-tab-pane htactive" id="woolentortabf13b12b1">
                                                                                     <div class="ht-row">
@@ -1704,13 +1676,19 @@
                           value="90"
                           data-max="90"
                           placeholder="Max price"
+                          class="mt-3"
                         />
-                        <button type="submit" class="button">Filter</button>
-                        <div class="price_label" style="display: none">
+                        <button
+                          type="submit"
+                          class="button btn btn-primary mt-3"
+                        >
+                          Filter
+                        </button>
+                        <div class="price_label mt-2" style="display: none">
                           Price: <span class="from"></span> &mdash;
                           <span class="to"></span>
                         </div>
-                        <div class="clear"></div>
+                        <div class="clear mt-2"></div>
                       </div>
                     </div>
                   </form>
@@ -1815,7 +1793,7 @@
                     <form class="woocommerce-ordering" method="get">
                       <select
                         name="orderby"
-                        class="orderby"
+                        class="orderby mb-3"
                         aria-label="Shop order"
                       >
                         <option value="menu_order" selected="selected">
