@@ -20063,7 +20063,7 @@ div.product div.images .flex-control-nav.flex-control-thumbs li img.flex-active 
 }
 
 .widget_shopping_cart .cart-widget-title {
-    text-align: right;
+    text-align: left;
     padding-bottom: 3px;
     font-size: 12px;
     font-weight: bold;
