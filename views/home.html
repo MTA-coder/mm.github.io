@@ -3638,5 +3638,35 @@
 
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib//jquery/dist/jquery.min.js"></script>
+    <script src="../assets/lib/fontawesome/js/all.min.js"></script>
+
+    <script>
+      $(document).on("mouseover", ".section-counter", () => {
+        const counters = document.querySelectorAll(".animate-counter");
+        const speed = 300;
+
+        counters.forEach((counter) => {
+          const animate = () => {
+            const value = +counter.getAttribute("counter");
+            const data = +counter.innerText;
+
+            const time = value / speed;
+            if (data < value) {
+              counter.innerText = Math.ceil(data + time);
+              setTimeout(animate, 1);
+            } else {
+              counter.innerText = value;
+            }
+          };
+
+          animate();
+        });
+      });
+    </script>
+    <script>
+      $(".category-section").ready((e) => {
+        $(".category-section").addClass("category-animation");
+      });
+    </script>
   </body>
 </html>
