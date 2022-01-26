@@ -231,6 +231,9 @@
         .nav-search-mobile {
             display: block !important;
         }
+        footer {
+            display: none;
+        }
     }
     
     @media screen and (max-width: 1920px) {
@@ -242,6 +245,17 @@
     .font-navbar,
     .info {
         font-family: fantasy;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100% !important;
+    }
+    
+    #navbar {
+        background: white;
+        z-index: 1000000;
     }
 </style>
 
@@ -310,274 +324,160 @@
               </div>
             </div>
 
-            <div class="col-md-12 col-sm-12 main-menu">
-              <nav
-                class="navbar navbar-expand-lg primary-nav bordered bordered-right"
-              >
-                <div class="container-fluid">
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 main-menu" id="navbar">
+            <nav
+              class="navbar navbar-expand-lg primary-nav bordered bordered-right"
+            >
+              <div class="container-fluid">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+                <div
+                  class="justify-content-around collapse navbar-collapse"
+                  id="navbarNav"
+                >
+                  <ul
+                    class="navbar-nav mega-menu max-mega-menu mega-menu-horizontal mega-no-js d-flex justify-content-evenly align-items-center w-100"
+                    id="mega-menu-primary-nav"
+                    data-event="hover_intent"
+                    data-effect="fade_up"
+                    data-effect-speed="200"
+                    data-effect-mobile="disabled"
+                    data-effect-speed-mobile="0"
+                    data-panel-width=".logo-wrapper .container"
+                    data-panel-inner-width=".logo-wrapper .container"
+                    data-mobile-force-width="false"
+                    data-second-click="go"
+                    data-document-click="collapse"
+                    data-vertical-behaviour="accordion"
+                    data-breakpoint="800"
+                    data-unbind="true"
+                    data-mobile-state="collapse_all"
+                    data-hover-intent-timeout="300"
+                    data-hover-intent-interval="100"
                   >
-                    <i class="fas fa-bars"></i>
-                  </button>
-                  <div
-                    class="justify-content-around collapse navbar-collapse"
-                    id="navbarNav"
-                  >
-                    <ul
-                      class="navbar-nav mega-menu max-mega-menu mega-menu-horizontal mega-no-js d-flex justify-content-evenly align-items-center w-100"
-                      id="mega-menu-primary-nav"
-                      data-event="hover_intent"
-                      data-effect="fade_up"
-                      data-effect-speed="200"
-                      data-effect-mobile="disabled"
-                      data-effect-speed-mobile="0"
-                      data-panel-width=".logo-wrapper .container"
-                      data-panel-inner-width=".logo-wrapper .container"
-                      data-mobile-force-width="false"
-                      data-second-click="go"
-                      data-document-click="collapse"
-                      data-vertical-behaviour="accordion"
-                      data-breakpoint="800"
-                      data-unbind="true"
-                      data-mobile-state="collapse_all"
-                      data-hover-intent-timeout="300"
-                      data-hover-intent-interval="100"
+                    <li
+                      class="p-2 nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-3132 mega-current_page_item mega-align-bottom-left mega-menu-flyout mega-menu-item-4398"
+                      id="mega-menu-item-4398"
                     >
-                      <li
-                        class="p-2 nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-3132 mega-current_page_item mega-align-bottom-left mega-menu-flyout mega-menu-item-4398"
-                        id="mega-menu-item-4398"
+                      <a
+                        class="active mega-menu-link"
+                        aria-current="page"
+                        href="landingpage.html"
+                        >Home</a
                       >
-                        <a
-                          class="active mega-menu-link"
-                          aria-current="page"
-                          href="#"
-                          >Home</a
-                        >
-                      </li>
-                      <li
-                        id="mega-menu-item-4399"
-                        class="nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4399 p-2"
+                    </li>
+                    <li
+                      id="mega-menu-item-4399"
+                      class="nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4399 p-2"
+                    >
+                      <a class="mega-menu-link" href="#">About us</a>
+                    </li>
+                    <li
+                      id="mega-menu-item-4399"
+                      class="p-2 nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4399 conact-us"
+                    >
+                      <a class="mega-menu-link" href="#">Contact us</a>
+                    </li>
+                    <li
+                      id="mega-menu-item-4397"
+                      class="p-2 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4397"
+                    >
+                      <a class="mega-menu-link" href="home.html" tabindex="0"
+                        >Clothes</a
                       >
-                        <a class="mega-menu-link" href="#">About us</a>
-                      </li>
-                      <li
-                        id="mega-menu-item-4399"
-                        class="p-2 nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4399 conact-us"
+                    </li>
+                    <li
+                      class="p-2 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4397"
+                    >
+                      <a
+                        class="mega-menu-link"
+                        href="furniture.html"
+                        tabindex="0"
+                        >Furniture</a
                       >
-                        <a class="mega-menu-link" href="#">Contact us</a>
-                      </li>
-                      <li
-                        id="mega-menu-item-4397"
-                        class="p-2 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4397"
-                      >
-                        <a class="mega-menu-link" href="home.html" tabindex="0"
-                          >Clothes</a
-                        >
-                      </li>
-                      <li
-                        class="p-2 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-4397"
-                      >
-                        <a
-                          class="mega-menu-link"
-                          href="furniture.html"
-                          tabindex="0"
-                          >Furniture</a
-                        >
-                      </li>
-                      <li
-                        class="p-2 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout"
-                      >
-                        <div class="search-navbar nav-search">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="search for everything you need is here.."
-                            style="width: 25rem"
-                          />
-                          <i class="fas fa-search fs-5 icon-search"></i>
-                        </div>
-                        <div class="search-navbar nav-search-mobile">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="search..."
-                          />
-                          <i class="fas fa-search fs-5 icon-search"></i>
-                        </div>
-                      </li>
-                      <li
-                        class="p-2 nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-3132 mega-current_page_item mega-align-bottom-left mega-menu-flyout"
-                      ></li>
-                    </ul>
-                  </div>
+                    </li>
+                    <li
+                      class="p-2 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout"
+                    >
+                      <div class="search-navbar nav-search">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="search for everything you need is here.."
+                          style="width: 25rem"
+                        />
+                        <i class="fas fa-search fs-5 icon-search"></i>
+                      </div>
+                      <div class="search-navbar nav-search-mobile">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="search..."
+                        />
+                        <i class="fas fa-search fs-5 icon-search"></i>
+                      </div>
+                    </li>
+                    <li
+                      class="p-2 nav-item mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-3132 mega-current_page_item mega-align-bottom-left mega-menu-flyout"
+                    ></li>
+                  </ul>
                 </div>
-              </nav>
-            </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
       <!-- Logo & hgroup (end)-->
     </header>
-    <section>
-      <div
-        id="carouselExampleFade"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner" style="height: 85vh">
-          <div class="carousel-item active">
-            <img
-              src="../assets/imgs/carasoul/furniture-2.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/furniture-4.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/furniture-3.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/shoes-1.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/shoes-2.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/bags-1.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/bags-3.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../assets/imgs/carasoul/bags-2.jpg"
-              class="w-100 h-100"
-              alt="..."
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="visually-hidden">Previous</span>
-                                                    </button>
-                                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-                                            </div>
-                                            </section>
-
-                                            <section class="mt-5 section-counter">
-                                                <div class="row">
-                                                    <div class="col-md-3 text-center mt-3">
-                                                        <i class="fas fa-shoe-prints rounded-circle-icon fs-1 mb-3 rotating"></i>
-                                                        <br />
-                                                        <span class="font-font-awesome fs-4">Over +<span counter="1500" class="animate-counter">0</span> <br /> Shoes
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-md-3 text-center mt-3">
-                                                        <i class="fas fa-shopping-bag rounded-circle-icon fs-1 mb-3 rotating"></i>
-                                                        <br />
-                                                        <span class="font-font-awesome fs-4">Over +<span counter="3000" class="animate-counter">0</span> <br /> Bags
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-md-3 text-center mt-3">
-                                                        <i class="fas fa-couch rounded-circle-icon fs-1 mb-3 rotating"></i>
-                                                        <br />
-                                                        <span class="font-font-awesome fs-4">Over +<span counter="10000" class="animate-counter">0</span> <br /> Furniture
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-md-3 text-center mt-3">
-                                                        <i class="fas fa-user rounded-circle-icon fs-1 mb-3 rotating"></i>
-                                                        <br />
-                                                        <span class="font-font-awesome fs-4">Over +<span counter="6000" class="animate-counter">0</span> <br /> Leather
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </section>
-
-                                            <div class="container mt-5 category-section">
-                                                <div class="text-center fa-2x">OUR CATEGORIES</div>
-
-                                                <div class="row">
-                                                    <div class="col-md-6 mt-3">
-                                                        <div class="category-img" style="height: 18rem">
-                                                            <img src="../assets/imgs/bag/bag-1.png" alt="Bag" class="w-100 h-100" style="border-radius: 10%" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mt-3">
-                                                        <div class="category-img" style="height: 18rem">
-                                                            <img src="../assets/imgs/furniture/furniture-5.jpg" alt="Furnitrue" class="w-100 h-100" style="border-radius: 10%" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mt-3">
-                                                        <div class="category-img" style="height: 18rem">
-                                                            <img src="../assets/imgs/carasoul/shoes-2.jpg" alt="Shoes" class="w-100 h-100" style="border-radius: 10%" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mt-3">
-                                                        <div class="category-img" style="height: 18rem">
-                                                            <img src="../assets/imgs/carasoul/shoes-1.jpg" alt="Leather" class="w-100 h-100" style="border-radius: 10%" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <section class="mt-5 elementor-section elementor-top-section elementor-element elementor-element-c2cd445 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c2cd445" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-49f7dd5" data-id="49f7dd5" data-element_type="column">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-f13b12b elementor-widget elementor-widget-woolentor-universal-product" data-id="f13b12b" data-element_type="widget" data-widget_type="woolentor-universal-product.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="ht-products woocommerce">
-                                                                                <div class="ht-tab-pane htactive" id="woolentortabf13b12b1">
-                                                                                    <div class="ht-row">
-                                                                                        <!--Product Start-->
-                                                                                        <div class="ht-product ht-col-lg-3 ht-col-md-6 ht-col-sm-6 ht-col-xs-12 mb-30 product ht-product-action-right ht-product-action-on-hover ht-product-category-right-bottom ht-product-countdown-fill type-product post-73 status-publish first instock product_cat-accessories has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                                                                            <div class="ht-product-inner">
-                                                                                                <div class="ht-product-image-wrap">
-                                                                                                    <div class="img-cover-grey"></div>
-                                                                                                    <span class="ht-product-label ht-product-label-right">Sale!</span
+    <section
+      class="mt-5 elementor-section elementor-top-section elementor-element elementor-element-c2cd445 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      data-id="c2cd445"
+      data-element_type="section"
+    >
+      <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-row">
+          <div
+            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-49f7dd5"
+            data-id="49f7dd5"
+            data-element_type="column"
+          >
+            <div class="elementor-column-wrap elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div
+                  class="elementor-element elementor-element-f13b12b elementor-widget elementor-widget-woolentor-universal-product"
+                  data-id="f13b12b"
+                  data-element_type="widget"
+                  data-widget_type="woolentor-universal-product.default"
+                >
+                  <div class="elementor-widget-container">
+                    <div class="ht-products woocommerce">
+                      <div
+                        class="ht-tab-pane htactive"
+                        id="woolentortabf13b12b1"
+                      >
+                        <div class="ht-row">
+                          <!--Product Start-->
+                          <div
+                            class="ht-product ht-col-lg-3 ht-col-md-6 ht-col-sm-6 ht-col-xs-12 mb-30 product ht-product-action-right ht-product-action-on-hover ht-product-category-right-bottom ht-product-countdown-fill type-product post-73 status-publish first instock product_cat-accessories has-post-thumbnail sale shipping-taxable purchasable product-type-simple"
+                          >
+                            <div class="ht-product-inner">
+                              <div class="ht-product-image-wrap">
+                                <div class="img-cover-grey"></div>
+                                <span
+                                  class="ht-product-label ht-product-label-right"
+                                  >Sale!</span
                                 >
                                 <div class="ht-product-image">
                                   <a href="#">
@@ -662,8 +562,8 @@
                                             >20.00</bdi
                                           >
                                         </span>
-                                                                                                    </del>
-                                                                                                    <ins><span
+                                                    </del>
+                                                    <ins><span
                                           class="woocommerce-Price-amount amount"
                                           ><bdi
                                             ><span
@@ -3645,6 +3545,27 @@
       $(".category-section").ready((e) => {
         $(".category-section").addClass("category-animation");
       });
+    </script>
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
     </script>
   </body>
 </html>
