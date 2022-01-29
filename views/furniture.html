@@ -27,6 +27,29 @@
 
 <!-- <link type="text/css" rel="stylesheet" href="../assets/css/furniture.min.css"> -->
 <style>
+    .imgs-product {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .shopping-cart .quantity {
+        position: absolute;
+        top: -15px;
+        border-radius: 50%;
+        background: #fa3737;
+        width: 20px;
+        height: 20px;
+        right: 2px;
+    }
+    
+    .form-control {
+        border-radius: 10px !important;
+    }
+    
+    .btn-color {
+        border-radius: 50%;
+        height: 25px;
+    }
     /* @keyframes showing {
         from {
             opacity: 0;
@@ -287,19 +310,19 @@
         <div style="box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);color: whitesmoke;background: #1f2226;">
             <div class="container">
                 <div class="row p-2 ">
-                    <div class="ht-col-md-6 ht-col-xs-12">
-                        <div class="row info">
-                            <div class="col-md-3 ">info@email.com</div>
-                            <div class="col-md-3 ">+999-987654321</div>
+                    <div class="ht-col-md-7 ht-col-xs-12">
+                        <div class="row info text-center">
+                            <div class="ht-col-md-3 ht-col-xs-6">info@email.com</div>
+                            <div class="ht-col-md-4 ht-col-xs-6">+999-987654321</div>
                         </div>
                     </div>
-                    <div class="ht-col-md-6 ht-col-xs-12">
-                        <div class="row justify-content-end">
-                            <div class="col-md-1"><a href="#" target="_blank" title="Connect us on facebook" style="color: whitesmoke;"><i class="fab fa-facebook-f fs-4 " ></i></a></div>
-                            <div class="col-md-1"><a href="#" target="_blank" title="Connect us on telegram" style="color: whitesmoke;"><i class="fab fa-instagram fs-4"></i></a></div>
-                            <div class="col-md-1"><a href="#" target="_blank" title="Connect us on linkedin" style="color: whitesmoke;"><i class="fab fa-linkedin fs-4"></i></a></div>
-                            <div class="col-md-1"><a href="#" target="_blank" title="Connect us on twitter" style="color: whitesmoke;"><i class="fab fa-twitter fs-4"></i></a></div>
-                            <div class="col-md-1"><a href="#" target="_blank" title="Connect us on pinterest" style="color: whitesmoke;"><i class="fab fa-pinterest fs-4"></i></a></div>
+                    <div class="ht-col-md-5 ht-col-xs-12">
+                        <div class="row  justify-content-evenly ">
+                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on facebook" style="color: whitesmoke;"><i class="fab fa-facebook-f fs-4 " ></i></a></div>
+                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on telegram" style="color: whitesmoke;"><i class="fab fa-instagram fs-4"></i></a></div>
+                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on linkedin" style="color: whitesmoke;"><i class="fab fa-linkedin fs-4"></i></a></div>
+                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on twitter" style="color: whitesmoke;"><i class="fab fa-twitter fs-4"></i></a></div>
+                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on pinterest" style="color: whitesmoke;"><i class="fab fa-pinterest fs-4"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -386,6 +409,7 @@
     <div class="shopping-cart">
         <button class="btn btn-dark text-center" >
           <i class="fas fa-shopping-cart fs-2"></i>
+          <span class="quantity">1</span>
         </button>
     </div>
 
