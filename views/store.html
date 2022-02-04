@@ -16,6 +16,32 @@
 <link type="text/css" rel="stylesheet" href="../assets/css/htflexboxgrid.css" />
 <link rel="stylesheet" href="../assets/css/sharedLayout.css">
 
+<style>
+    .remove-product {
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    
+    .product-quantity-btn {
+        border: none;
+        background: none;
+    }
+    
+    .product-quantity-increment {
+        text-align: center;
+    }
+    
+    .product-quantity-increment:focus {
+        box-shadow: none !important;
+    }
+    
+    input::-webkit-inner-spin-button {
+        display: none;
+    }
+</style>
+
 <body>
     <header id="masthead" class="site-header standart">
         <!-- Logo & hgroup (start)-->
@@ -30,11 +56,11 @@
                     </div>
                     <div class="ht-col-md-5 ht-col-xs-12">
                         <div class="row  justify-content-evenly ">
-                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on facebook" style="color: whitesmoke;"><i class="fab fa-facebook-f fs-4 " ></i></a></div>
-                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on telegram" style="color: whitesmoke;"><i class="fab fa-instagram fs-4"></i></a></div>
-                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on linkedin" style="color: whitesmoke;"><i class="fab fa-linkedin fs-4"></i></a></div>
-                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on twitter" style="color: whitesmoke;"><i class="fab fa-twitter fs-4"></i></a></div>
-                            <div class="ht-col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on pinterest" style="color: whitesmoke;"><i class="fab fa-pinterest fs-4"></i></a></div>
+                            <div class="ht-d-flex justify-content-center col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on facebook" style="color: whitesmoke;"><i class="fab fa-facebook-f fs-4 " ></i></a></div>
+                            <div class="ht-d-flex justify-content-center col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on telegram" style="color: whitesmoke;"><i class="fab fa-instagram fs-4"></i></a></div>
+                            <div class="ht-d-flex justify-content-center col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on linkedin" style="color: whitesmoke;"><i class="fab fa-linkedin fs-4"></i></a></div>
+                            <div class="ht-d-flex justify-content-center col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on twitter" style="color: whitesmoke;"><i class="fab fa-twitter fs-4"></i></a></div>
+                            <div class="ht-d-flex justify-content-center col-md-1 ht-col-xs-1"><a href="#" target="_blank" title="Connect us on pinterest" style="color: whitesmoke;"><i class="fab fa-pinterest fs-4"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -121,106 +147,151 @@
     <div class="container-fluid mt-5">
         <h2 class="text-center mb-2">Shopping Cart</h2>
 
-<div class="card p-4">
-    <table class="table text-center">
-        <thead class="thead-dark">
-            <th>image</th>
-            <th>product name</th>
-            <th>quantity</th>
-            <th>price</th>
-            <th>Action</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                <img src="../assets/imgs/bag/bag-1.png" alt="bag1" width="60">  
-                </td>
-                <td>
-                    hand bag awesome
-                </td>
-                <td >
-                    <div class="row">
-                        <div class="col-md-3">
-                            <button class="btn btn-danger btn-sub">-</button>
+
+    <div class="container-fulid">
+        <div class="card p-4">
+            <div class="row text-center mb-3">
+                <div class="col-md-5">
+                    PRODUCT
+                </div>
+                <div class="col-md-3">
+                    Quantity
+                </div>
+                <div class="col-md-3">
+                    TOTAL
+                </div>
+                <div class="col-md-1"></div>
+                <hr>
+            </div>
+            <div class="row mt-3 d-flex align-items-baseline">
+                <div class="col-md-5">
+                    <div class="product-cart">
+                        <div class="row">
+                            <div class="col-md-6">
+                             <div class="product-img" class="w-100 h-100">
+                                 <img src="../assets/imgs/bag/bag-1.png" alt="bag1" class="w-100 h-100">
+                             </div>
+                            </div>
+                            <div class="col-md-6 fs-4">
+                             <div class="product-details">
+                                 <div class="product-category">Handbag</div>
+                                 <div class="product-model">hand bag normal </div>
+                                 <div class="product-price fw-bold">$ 15.00</div>
+                             </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 mt-xs-1 mb-xs-1">
-                            <input type="number" min="0" value="5" class="form-control text-center" width="25">
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex">
+                        <div class="p-2">
+                            <button class="fw-bold fs-5 product-quantity-btn btn-sub">-</button>
                         </div>
-                        <div class="col-md-3">
-                        <button class="btn btn-dark btn-add">+</button>
+                        <div class="p-2">
+                            <input type="number" min="0" value="3" class="form-control product-quantity-increment">
                         </div>
-    
+                        <div class="p-2">
+                            <button class="fw-bold fs-5 product-quantity-btn btn-add">+</button>
+                        </div>
                     </div>
-                </td>
-                <td>
-                    <span>1500 $</span>
-                </td>
-                <td>
-                    <div class="text-danger cursor-pointer remove-product">X</div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <img src="../assets/imgs/bag/bag-3.png" alt="bag1" width="60">  
-                </td>
-                <td>
-                    hand bag awesome
-                </td>
-                <td >
-                    <div class="row">
-                        <div class="col-md-3">
-                            <button class="btn btn-danger btn-sub ">-</button>
-                        </div>
-                        <div class="col-md-6 mt-xs-1 mb-xs-1">
-                            <input type="number" min="0" value="5" class="form-control text-center" width="25">
-                        </div>
-                        <div class="col-md-3">
-                        <button class="btn btn-dark btn-add">+</button>
-                        </div>
-    
+                </div>
+                <div class="col-md-3">
+                    <div class="fw-bold text-center fs-4">
+                        $ 33.24
                     </div>
-                </td>
-                <td>
-                    <span>1500 $</span>
-                </td>
-                <td>
-                    <div class="text-danger cursor-pointer remove-product">X</div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <img src="../assets/imgs/bag/bag-2.png" alt="bag1" width="60">  
-                </td>
-                <td>
-                    hand bag awesome
-                </td>
-                <td >
-                    <div class="row">
-                        <div class="col-md-3">
-                            <button class="btn btn-danger btn-sub">-</button>
+                </div>
+                <div class="d-flex justify-content-center col-md-1">
+                    <button class="fw-bold fs-6 remove-product">X</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-3 d-flex align-items-baseline">
+                <div class="col-md-5">
+                    <div class="product-cart">
+                        <div class="row">
+                            <div class="col-md-6">
+                             <div class="product-img" class="w-100 h-100">
+                                 <img src="../assets/imgs/bag/bag-2.png" alt="bag1" class="w-100 h-100">
+                             </div>
+                            </div>
+                            <div class="col-md-6 fs-4">
+                             <div class="product-details">
+                                 <div class="product-category">Handbag</div>
+                                 <div class="product-model">hand bag normal </div>
+                                 <div class="product-price fw-bold">$ 15.00</div>
+                             </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 mt-xs-1 mb-xs-1">
-                            <input type="number" min="0" value="5" class="form-control text-center" width="25">
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex">
+                        <div class="p-2">
+                            <button class="fw-bold fs-5 product-quantity-btn btn-sub">-</button>
                         </div>
-                        <div class="col-md-3">
-                        <button class="btn btn-dark btn-add">+</button>
+                        <div class="p-2">
+                            <input type="number" min="0" value="3" class="form-control product-quantity-increment">
                         </div>
-    
+                        <div class="p-2">
+                            <button class="fw-bold fs-5 product-quantity-btn btn-add">+</button>
+                        </div>
                     </div>
-                </td>
-                <td>
-                    <span>1500 $</span>
-                </td>
-                <td>
-                    <div class="text-danger cursor-pointer  remove-product">X</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="row flex-row-reverse">
-            <button class="btn btn-dark btn-add w-25">Checkout</button>
-    </div>
-</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="fw-bold text-center fs-4">
+                        $ 33.24
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center col-md-1">
+                    <button class="fw-bold fs-6 remove-product">X</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-3 d-flex align-items-baseline">
+                <div class="col-md-5">
+                    <div class="product-cart">
+                        <div class="row">
+                            <div class="col-md-6">
+                             <div class="product-img" class="w-100 h-100">
+                                 <img src="../assets/imgs/bag/bag-3.png" alt="bag1" class="w-100 h-100">
+                             </div>
+                            </div>
+                            <div class="col-md-6 fs-4">
+                             <div class="product-details">
+                                 <div class="product-category">Handbag</div>
+                                 <div class="product-model">hand bag normal </div>
+                                 <div class="product-price fw-bold">$ 15.00</div>
+                             </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex">
+                        <div class="p-2">
+                            <button class="fw-bold fs-5 product-quantity-btn btn-sub">-</button>
+                        </div>
+                        <div class="p-2">
+                            <input type="number" min="0" value="3" class="form-control product-quantity-increment">
+                        </div>
+                        <div class="p-2">
+                            <button class="fw-bold fs-5 product-quantity-btn btn-add">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="fw-bold text-center fs-4">
+                        $ 33.24
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center col-md-1">
+                    <button class="fw-bold fs-6 remove-product">X</button>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <button class="btn btn-dark w-25">Checkout</button>
+            </div>
+        </div>
     </div>
 
     <footer id="colophon" class="footer_area_two mt-5">
@@ -283,19 +354,19 @@
 
         <script>
             $(document).on('click', '.btn-add', (event) => {
-                var tr = $(event.target).closest('tr');
-                var input = tr.find('input');
+                var parent = $(event.target).parent('div').parent('div');
+                var input = parent.find('input');
                 input.val(parseInt(input.val()) + 1);
             });
 
             $(document).on('click', '.btn-sub', (event) => {
-                var tr = $(event.target).closest('tr');
-                var input = tr.find('input');
+                var parent = $(event.target).parent('div').parent('div');
+                var input = parent.find('input');
                 input.val(parseInt(input.val()) != 0 ? input.val() - 1 : input.val());
             });
 
             $(document).on('click', '.remove-product', (event) => {
-                $(event.target).closest('tr').remove();
+                $(event.target).closest('.row').remove();
             });
         </script>
 
