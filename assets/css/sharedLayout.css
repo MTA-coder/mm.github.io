@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    margin: 0 !important;
 }
 
 .form-control {
@@ -92,10 +92,4 @@
 
 .cursor-pointer {
     cursor: pointer;
-}
-
-html {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
 }
